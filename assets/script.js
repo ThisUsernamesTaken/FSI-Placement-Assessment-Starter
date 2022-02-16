@@ -1,7 +1,7 @@
 // HINT: You can delete this console.log after you no longer need it!
 console.log('JavaScript code has loaded!')
 // First, tell us your name
-let yourName = "Jane Doe" // HINT: Replace this with your own name!
+let yourName = "Coleman Byrd" // HINT: Replace this with your own name!
 
 // We'll use these variables to track the counts of each cookie type
 let gb = 0 // Gingerbread
@@ -12,6 +12,12 @@ let sugar = 0 // Sugar Sprinkle
 const credit = document.querySelector('#credit')
 // selecting the element with an id of add-gb
 const gbPlusBtn = document.querySelector('#add-gb')
+const gbMinusBtn = document.querySelector('#minus-gb')
+const ccPlusBtn = document.querySelector('#add-cc')
+const ccMinusBtn = document.querySelector('#minus-cc')
+const sugarPlusBtn = document.querySelector('#add-sugar')
+const sugarMinusBtn = document.querySelector('#minus-sugar')
+const totalQty = document.querySelector('.total-quantity')
 
 // Code to update name display
 credit.textContent = `Created by ${yourName}`
@@ -23,5 +29,43 @@ console.log('Gingerbread + button was clicked!')
 
 // TODO: Write the code to be run when the "+" button for "Gingerbread" is clicked
 })
-
+gbMinusBtn.addEventListener('click', function() {
+    console.log('Gingerbread - was clicked!')
+})
+ccPlusBtn.addEventListener('click', function() {
+    console.log('Chocolate Chip + was clicked!')
+})
+ccMinusBtn.addEventListener('click', function() {
+    console.log('Chocolate Chip - was clicked!')
+})
+sugarPlusBtn.addEventListener('click', function() {
+    console.log('Sugar Sprinkle + was clicked!')
+})
+sugarMinusBtn.addEventListener('click', function () {
+    console.log('Sugar Sprinkle - was clicked!')
+})
+gbPlusBtn.addEventListener('click', function () {
+    totalNum = totalNum + 1;
+    totalQty.textContent = 'Quantity: ${totalNum}'
+})
+gbMinusBtn.addEventListener('click', function () {
+    totalNum = totalNum - 1;
+    totalQty.textContent = 'Quantity: ${totalNum}'
+})
+ccPlusBtn.addEventListener('click', function () {
+    totalNum = totalNum + 1;
+    totalQty.textContent = 'Quantity: ${totalNum}'
+})
+ccMinusBtn.addEventListener('click', function () {
+    totalNum = totalNum - 1;
+    totalQty.textContent = 'Quantity: ${totalNum}'
+})
+sugarPlusBtn.addEventListener('click', function () {
+    totalNum = totalNum + 1;
+    totalQty.textContent = 'Quantity: ${totalNum}'
+})
+sugarMinusBtn.addEventListener('click', function () {
+    totalNum = totalNum - 1;
+    totalQty.textContent = 'Quantity: ${totalNum}'
+})
 // TODO: Hook up event listeners for the rest of the buttons
